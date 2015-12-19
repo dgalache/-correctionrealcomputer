@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Tipo:
+  = @funcao.tipo
+%p
+  %b Salario:
+  = @funcao.salario
+%p
+  %b Ch:
+  = @funcao.ch
+
+= link_to 'Edit', edit_funcao_path(@funcao)
+\|
+= link_to 'Back', funcaos_path

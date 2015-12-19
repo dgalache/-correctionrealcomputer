@@ -1,0 +1,25 @@
+%h1 Listing funcaos
+
+%table
+  %thead
+    %tr
+      %th Tipo
+      %th Salario
+      %th Ch
+      %th
+      %th
+      %th
+
+  %tbody
+    - @funcaos.each do |funcao|
+      %tr
+        %td= funcao.tipo
+        %td= funcao.salario
+        %td= funcao.ch
+        %td= link_to 'Show', funcao
+        %td= link_to 'Edit', edit_funcao_path(funcao)
+        %td= link_to 'Destroy', funcao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Funcao', new_funcao_path
