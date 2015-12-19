@@ -1,0 +1,25 @@
+%h1 Listing cargos
+
+%table
+  %thead
+    %tr
+      %th Tipo
+      %th Salario
+      %th Ch
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cargos.each do |cargo|
+      %tr
+        %td= cargo.tipo
+        %td= cargo.salario
+        %td= cargo.ch
+        %td= link_to 'Show', cargo
+        %td= link_to 'Edit', edit_cargo_path(cargo)
+        %td= link_to 'Excluir', cargo, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cargo', new_cargo_path

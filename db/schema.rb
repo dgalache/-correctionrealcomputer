@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219191950) do
+ActiveRecord::Schema.define(version: 20151219233333) do
+
+  create_table "cargos", force: :cascade do |t|
+    t.string   "tipo"
+    t.float    "salario"
+    t.integer  "ch"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "funcaos", force: :cascade do |t|
     t.string   "tipo"
