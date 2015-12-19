@@ -10,10 +10,10 @@ require 'rails_helper'
 			visit edit_cliente_path(cliente)
 			preencher_e_verficar_cliente
 		end
-		
-		scenario 'excluir funcao' do #, :javascript => true do
-			funcao = FactoryGirl.create(:funcao)
-			visit funcaos_path
+
+		scenario 'excluir cliente' do #, :javascript => true do
+			cliente = FactoryGirl.create(:cliente)
+			visit clientes_path
 		
 			click_link('Excluir', match: :first)
 		end
