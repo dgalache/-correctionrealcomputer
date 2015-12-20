@@ -1,0 +1,12 @@
+= simple_form_for(@cliente) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :telefone
+    = f.input :endereco
+    = f.input :cpf
+    = f.input :satisfacao
+
+  .form-actions
+    = f.submit "Salvar"

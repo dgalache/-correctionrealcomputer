@@ -21,7 +21,7 @@ require 'rails_helper'
 			fill_in 'Nome', :with => "Joao Junio"
 			fill_in 'Telefone', :with => "998567885"
 			fill_in 'Endereco', :with => "Rua D"
-			fill_in 'CPF', :with => "13345654334"
+			fill_in 'Cpf', :with => "133.456.543-34"
 			fill_in 'Satisfacao', :with => "Bom servico"			
 			
 			click_button 'Salvar'
@@ -29,7 +29,7 @@ require 'rails_helper'
 			expect(page).to have_content 'Nome: Joao Junio'
 			expect(page).to have_content 'Telefone: 998567885'
 			expect(page).to have_content 'Endereco: Rua D'
-			expect(page).to have_content 'CPF: 13345654334'
+			expect(page).to have_content 'Cpf: 133.456.543-34'
 			expect(page).to have_content 'Satisfacao: Bom servico'
 			
 		end
