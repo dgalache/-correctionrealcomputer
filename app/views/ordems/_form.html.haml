@@ -1,0 +1,15 @@
+= simple_form_for(@ordem) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :equipamento
+    = f.input :defeito
+    = f.input :marca
+    = f.input :descricao
+    = f.input :status
+    = f.input :valor
+    = f.association :cliente, label_method: :nome
+    = f.association :empregado, label_method: :nome
+
+  .form-actions
+    = f.submit "Salvar"

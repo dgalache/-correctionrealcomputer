@@ -8,7 +8,7 @@
     = f.input :dataadm
     = f.input :cpf
     = f.input :rg
-    = f.association :cargo
+    = f.association :cargo, label_method: :tipo
 
   .form-actions
     = f.submit "Salvar"

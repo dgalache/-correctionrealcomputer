@@ -23,8 +23,8 @@
         %td= empregado.dataadm
         %td= empregado.cpf
         %td= empregado.rg
-        %td= empregado.cargo
-        %td= link_to 'Show', empregado
+        %td= empregado.cargo.tipo
+        %td= link_to 'Show', empregado 
         %td= link_to 'Edit', edit_empregado_path(empregado)
         %td= link_to 'Excluir', empregado, :method => :delete, :data => { :confirm => 'Are you sure?' }
 

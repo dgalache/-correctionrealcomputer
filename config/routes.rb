@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ordems
   resources :empregadors
   resources :empregados
   resources :clientes

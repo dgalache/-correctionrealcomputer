@@ -1,0 +1,35 @@
+%h1 Listing ordems
+
+%table
+  %thead
+    %tr
+      %th Equipamento
+      %th Defeito
+      %th Marca
+      %th Descricao
+      %th Status
+      %th Valor
+      %th Cliente
+      %th Empregado
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ordems.each do |ordem|
+      %tr
+        %td= ordem.equipamento
+        %td= ordem.defeito
+        %td= ordem.marca
+        %td= ordem.descricao
+        %td= ordem.status
+        %td= ordem.valor
+        %td= ordem.cliente.nome
+        %td= ordem.empregado 
+        %td= link_to 'Show', ordem
+        %td= link_to 'Edit', edit_ordem_path(ordem)
+        %td= link_to 'Excluir', ordem, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ordem', new_ordem_path

@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Equipamento:
+  = @ordem.equipamento
+%p
+  %b Defeito:
+  = @ordem.defeito
+%p
+  %b Marca:
+  = @ordem.marca
+%p
+  %b Descricao:
+  = @ordem.descricao
+%p
+  %b Status:
+  = @ordem.status
+%p
+  %b Valor:
+  = @ordem.valor
+%p
+  %b Cliente:
+  = @ordem.cliente
+%p
+  %b Empregado:
+  = @ordem.empregado 
+
+= link_to 'Edit', edit_ordem_path(@ordem)
+\|
+= link_to 'Back', ordems_path
