@@ -1,0 +1,11 @@
+= simple_form_for(@empregador) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :telefone
+    = f.input :endereco
+    = f.input :cnpj
+
+  .form-actions
+    = f.submit "Salvar"

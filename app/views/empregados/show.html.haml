@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @empregado.nome
+%p
+  %b Telefone:
+  = @empregado.telefone
+%p
+  %b Endereco:
+  = @empregado.endereco
+%p
+  %b Dataadm:
+  = @empregado.dataadm
+%p
+  %b Cpf:
+  = @empregado.cpf
+%p
+  %b Rg:
+  = @empregado.rg
+%p
+  %b Cargo:
+  = @empregado.cargo
+
+= link_to 'Edit', edit_empregado_path(@empregado)
+\|
+= link_to 'Back', empregados_path

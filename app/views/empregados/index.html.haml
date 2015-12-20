@@ -1,0 +1,33 @@
+%h1 Listing empregados
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Telefone
+      %th Endereco
+      %th Dataadm
+      %th Cpf
+      %th Rg
+      %th Cargo
+      %th
+      %th
+      %th
+
+  %tbody
+    - @empregados.each do |empregado|
+      %tr
+        %td= empregado.nome
+        %td= empregado.telefone
+        %td= empregado.endereco
+        %td= empregado.dataadm
+        %td= empregado.cpf
+        %td= empregado.rg
+        %td= empregado.cargo
+        %td= link_to 'Show', empregado
+        %td= link_to 'Edit', edit_empregado_path(empregado)
+        %td= link_to 'Excluir', empregado, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Empregado', new_empregado_path
