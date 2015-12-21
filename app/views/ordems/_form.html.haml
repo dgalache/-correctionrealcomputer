@@ -8,8 +8,8 @@
     = f.input :descricao
     = f.input :status
     = f.input :valor
-    = f.association :cliente, label_method: :nome
-    = f.association :empregado, label_method: :nome
+    = f.association :cliente
+    = f.association :empregado
 
   .form-actions
     = f.submit "Salvar"

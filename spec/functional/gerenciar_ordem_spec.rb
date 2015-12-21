@@ -47,12 +47,12 @@ feature 'gerenciar ordem' do
 		select dados[:nome], from: "Empregado"
 	end
 	def verificar(dados)
-		page.should have_content "Nome: #{dados[:nome]}"
-		page.should have_content "Telefone: #{dados[:telefone]}"
-		page.should have_content "Endereco: #{dados[:endereco]}"
-		page.should have_content "Dataadm: #{dados[:dataadm]}"
-		page.should have_content "Cpf: #{dados[:cpf]}"
-		page.should have_content "Rg: #{dados[:rg]}"
+		page.should have_content "Equipamento: #{dados[:equipamento]}"
+		page.should have_content "Defeito: #{dados[:defeito]}"
+		page.should have_content "Marca: #{dados[:marca]}"
+		page.should have_content "Descricao: #{dados[:descricao]}"
+		page.should have_content "Status: #{dados[:status]}"
+		page.should have_content "Valor: #{dados[:valor]}"
 		page.should have_content "Cliente: #{dados[:nome]}"
 		page.should have_content "Empregado: #{dados[:nome]}"
 	end
