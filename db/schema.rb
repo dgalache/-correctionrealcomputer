@@ -70,12 +70,12 @@ ActiveRecord::Schema.define(version: 20151220162949) do
     t.string   "status"
     t.float    "valor"
     t.integer  "cliente_id"
-    t.integer  "tecnico_id"
+    t.integer  "empregado_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "ordems", ["cliente_id"], name: "index_ordems_on_cliente_id"
-  add_index "ordems", ["tecnico_id"], name: "index_ordems_on_tecnico_id"
+  add_index "ordems", ["empregado_id"], name: "index_ordems_on_empregado_id"
 
 end
